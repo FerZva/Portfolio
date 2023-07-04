@@ -1,0 +1,89 @@
+@use 'Variables';
+
+//Font API
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+
+//Restting values
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+//
+body {
+    width: 100%;
+    background-image: url(Variables.$Background-desktop);
+    background-size: cover;
+    color: #fff;
+}
+
+.Container {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    padding: 0 150px;
+    font-family: 'Quicksand', sans-serif;
+
+    @media screen and (max-width: 1230px) {
+        padding: 40px;
+    }
+
+}
+
+button {
+    padding: 13px;
+    background: purple;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+    &:hover {
+        transition: ease 0.2s all;
+        background-color: rgb(186, 0, 186) ;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+}
+
+input {
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.error {
+    color: red;
+  }
+
+  .success-message {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    
+    img {
+        margin: 0;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+  }
+
+  .Container_navigation_icon.active {
+    color: purple;
+  }
