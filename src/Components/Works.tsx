@@ -11,26 +11,32 @@ const worksData = [
   {
     image: img1,
     title: "Easybank",
+    previewWebsiteLink: "https://clinquant-lamington-8be0c2.netlify.app",
   },
   {
     image: img2,
     title: "Calculator",
+    previewWebsiteLink: "https://symphonious-beijinho-596fe5.netlify.app",
   },
   {
     image: img3,
     title: "Countries",
+    previewWebsiteLink: "",
   },
   {
     image: img4,
     title: "Ecommerce",
+    previewWebsiteLink: "",
   },
   {
     image: img5,
     title: "Tic-Tac-Toe",
+    previewWebsiteLink: "",
   },
   {
     image: img6,
     title: "Space",
+    previewWebsiteLink: "",
   },
 ];
 
@@ -58,7 +64,7 @@ const Works = () => {
        className="Container_works-section_projects"
       >
         {worksData.map((workData, index) => {
-          const { image, title } = workData;
+          const { image, title, previewWebsiteLink } = workData;
           return (
             <div className="Container_works-section_projects_item" key={index}>
               <img
@@ -69,6 +75,11 @@ const Works = () => {
               <p className="Container_works-section_projects_item_title">
                 {title}
               </p>
+              <button className='Container_works-section_projects_item_button'>
+                <a href={previewWebsiteLink} target='_blank'>
+                  View live website
+                </a>
+              </button>
             </div>
           );
         })}

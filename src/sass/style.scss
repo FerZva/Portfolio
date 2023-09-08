@@ -227,6 +227,11 @@
                     cursor: pointer;
                     
                 }
+
+                &:hover &_button {
+                    opacity: 1;
+                    transition: 0.2s ease;
+                }
                 
                 &_img {
                     width: 100%;
@@ -244,6 +249,19 @@
                     position: absolute;
                     z-index: 3;
                     top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                }
+
+                &_button {
+ 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    z-index: 3;
+                    top: 70%;
                     left: 50%;
                     transform: translate(-50%, -50%);
                     opacity: 0;
